@@ -14,3 +14,4 @@ alias slidebot800='/Users/aljones/ITP/Year1/Semester2/ElectronicText/final_proje
 alias ls='ls -GFh'
 alias screen="/usr/local/bin/screen"
 alias firefox="/Applications/Firefox\ 2.app/Contents/MacOS/firefox"
+alias pingu="ping -c 3"
