@@ -13,3 +13,4 @@ alias deployH='bash ~/ITP/miamiww.github.io/deploy.sh'
 alias slidebot800='/Users/aljones/ITP/Year1/Semester2/ElectronicText/final_project/slidebot'
 alias ls='ls -GFh'
 alias screen="/usr/local/bin/screen"
+alias firefox="/Applications/Firefox\ 2.app/Contents/MacOS/firefox"
