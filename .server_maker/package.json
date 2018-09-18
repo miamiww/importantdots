@@ -1,0 +1,15 @@
+{
+  "name": "basicserver",
+  "version": "0.5.0",
+  "description": "quick express server setup",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "alden jones",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
