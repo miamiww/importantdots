@@ -1,7 +1,7 @@
 mkdir views
 mkdir public
 echo "node_modules" >> .gitignore
-touch views/index.html
+cp ~/.server_maker/index.html views/index.html
 touch public/script.js
 touch public/style.css
 cp ~/.server_maker/package.json package.json
