@@ -17,5 +17,5 @@ cd /Users/aljones/ITP/"$1"/"$2"
 }
 
 getIP(){
-bash /Users/aljones/sandbox/getIP
+bash /Users/aljones/.functions/.getIP/getIP
 }
