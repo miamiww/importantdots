@@ -19,7 +19,3 @@ cd /Users/aljones/ITP/"$1"/"$2"
 getIP(){
 bash /Users/aljones/sandbox/getIP
 }
-
-# added by Anaconda3 5.2.0 installer
-export PATH="/Users/aljones/anaconda3/bin:$PATH"
-
