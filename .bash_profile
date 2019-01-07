@@ -7,7 +7,7 @@ source $THIS_DIR/.tiny_care.sh
 cd /Users/aljones/ITP/Year2/1Semester/
 # source ~/ITP/Year1/Semester2/Other/FrequencySweeep/freqSweep.sh
 
-export PS1="👻 🌵 ✨ $ "
+export PS1="👻🌵✨$ "
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -19,3 +19,4 @@ cd /Users/aljones/ITP/"$1"/"$2"
 getIP(){
 bash /Users/aljones/.functions/.getIP/getIP
 }
+

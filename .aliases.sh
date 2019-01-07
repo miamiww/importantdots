@@ -15,3 +15,4 @@ alias ls='ls -GFh'
 alias screen="/usr/local/bin/screen"
 alias firefox="/Applications/Firefox\ 2.app/Contents/MacOS/firefox"
 alias pingu="ping -c 3"
+alias noCors="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security"
