@@ -4,11 +4,12 @@ source $THIS_DIR/.path_setup.sh
 source $THIS_DIR/.aliases.sh
 source $THIS_DIR/.tiny_care.sh
 
-cd /Users/aljones/ITP/Year2/1Semester/
+cd /Users/aljones/sandbox/
 # source ~/ITP/Year1/Semester2/Other/FrequencySweeep/freqSweep.sh
 
-export PS1="👻🌵✨$ "
-
+# export PS1="👻🌵✨$ "
+export PS1="👻🌵🔮 $ "
+#export PS1="👻🌵🌟$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
