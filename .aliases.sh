@@ -18,3 +18,13 @@ alias pingu="ping -c 3"
 alias noCors="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security"
 alias python27="conda activate py27"
 alias bashRestart="exec bash -l"
+
+alias appletviewer="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin/appletviewer"
+alias thesis="cd /Users/aljones/ITP/Year2/2Semester/Thesis"
+alias weather='curl wttr.in/nyc | less'
+alias wgetAll='wget --recursive --no-clobber --html-extension --page-requisites --convert-links --no-parent'
+
+
+ITP(){
+	cd /Users/aljones/ITP/"$1"/"$2"
+}

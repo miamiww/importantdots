@@ -3,6 +3,8 @@ echo "setting paths"
 # homebrew
 export PATH="/usr/local/bin:$PATH"
 
+# for when I make something just for me
+export PATH="/Users/aljones/.local/bin:$PATH"
 #added by Anaconda3 4.1.0 installer
 export PATH="/Users/aljones/anaconda/bin:$PATH"
 
