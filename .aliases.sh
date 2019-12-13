@@ -19,3 +19,16 @@ alias noCors="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --d
 alias python27="conda activate py27"
 alias bashRestart="exec bash -l"
 alias freeciv="freeciv-gtk2"
+
+alias appletviewer="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin/appletviewer"
+alias thesis="cd /Users/aljones/ITP/Year2/2Semester/Thesis"
+alias weather='curl wttr.in/nyc | less'
+alias wgetAll='wget --recursive --no-clobber --html-extension --page-requisites --convert-links --no-parent'
+alias thelot='mplayer -nocache -afm ffmpeg http://thelot.out.airtime.pro:8000/thelot_b'
+alias nts2='mplayer -nocache -afm ffmpeg http://stream-relay-geo.ntslive.net/stream2'
+alias nts1='mplayer -nocache -afm ffmpeg http://stream-relay-geo.ntslive.net/stream'
+
+ITP(){
+	cd /Users/aljones/ITP/"$1"/"$2"
+}
+>>>>>>> 639cb21688a789cab6030622ec1ee5b331c52bc6

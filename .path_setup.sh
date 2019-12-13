@@ -5,6 +5,8 @@ export PATH="/usr/local/bin:$PATH"
 
 #gnubin for oldschool ftp and telnet
 export PATH="/usr/local/opt/inetutils/libexec/gnubin:$PATH"
+# for when I make something just for me
+export PATH="/Users/aljones/.local/bin:$PATH"
 #added by Anaconda3 4.1.0 installer
 #export PATH="/Users/aljones/anaconda/bin:$PATH"
 

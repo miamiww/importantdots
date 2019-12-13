@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'Monaco, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -146,7 +146,11 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
+<<<<<<< HEAD
   plugins: ["hyperminimal", "hyperpower"],
+=======
+  plugins: ["hyperpower", "hyperminimal"],
+>>>>>>> 639cb21688a789cab6030622ec1ee5b331c52bc6
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
