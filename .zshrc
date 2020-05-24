@@ -8,6 +8,25 @@ source ~/.tiny_care.sh
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/aljones/.oh-my-zsh"
 
+# Path to antigen
+#source ~/.antigen.zsh
+#antigen use oh-my-zsh
+
+#antigen bundle git
+#antigen bundle pip
+#antigen bundle command-not-found
+
+
+# syntax hilighting
+#antigen bundle zsh-users/zsh-syntax-highlighting
+
+# theme
+#antigen theme geometry-zsh/geometry
+
+# final antigen, everything needs to be added before this
+#antigen apply
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME

@@ -19,16 +19,53 @@ alias noCors="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --d
 alias python27="conda activate py27"
 alias bashRestart="exec bash -l"
 alias freeciv="freeciv-gtk2"
+alias tclock="tty-clock -DBc -C 5"
 
 alias appletviewer="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin/appletviewer"
+
 alias thesis="cd /Users/aljones/ITP/Year2/2Semester/Thesis"
+alias cdgo="cd ~/.golang"
+
 alias weather='curl wttr.in/nyc | less'
 alias wgetAll='wget --recursive --no-clobber --html-extension --page-requisites --convert-links --no-parent'
+
 alias thelot='mplayer -nocache -afm ffmpeg http://thelot.out.airtime.pro:8000/thelot_b'
 alias nts2='mplayer -nocache -afm ffmpeg http://stream-relay-geo.ntslive.net/stream2'
 alias nts1='mplayer -nocache -afm ffmpeg http://stream-relay-geo.ntslive.net/stream'
+alias rinse='mplayer -nocache -afm ffmpeg http://206.189.117.157:8000/stream'
+alias cashmere='mplayer -nocache -afm ffmpeg http://cashmereradio.out.airtime.pro:8000/cashmereradio_b'
+alias kmhd='mplayer -nocache -afm ffmpeg http://stream5.opb.org/kmhd_web.mp3'
+
+alias resteyes='termdown 20 && say done'
+alias workcycle='termdown 20m && say rest eyes && termdown 20 && say done '
+alias sshB='ssh root@159.65.179.9'
+
+
 
 ITP(){
 	cd /Users/aljones/ITP/"$1"/"$2"
 }
->>>>>>> 639cb21688a789cab6030622ec1ee5b331c52bc6
+
+BIGIP(){
+	ASNUM=$1
+	shift;
+	echo 'Querying WHOIS for $ASNUM'
+	echo whois -h whois.radb.net -- \'-i origin $ASNUM\' \| grep route 
+}
+
+function countdown(){
+   date1=$((`date +%s` + $1)); 
+   while [ "$date1" -ge `date +%s` ]; do 
+     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+     sleep 0.1
+   done
+}
+
+function min7(){
+   n=1
+   while [ $n -le 12 ]
+   do
+	   say start && termdown 30 --exec-cmd "if [ '{0}' == '3' ]; then say -v Alex {1}; fi" && say stop && termdown 10 --exec-cmd "if [ '{0}' == '3' ]; then say -v Alex {1}; fi" 
+	   n=$(( n+1 ))
+   done
+}
