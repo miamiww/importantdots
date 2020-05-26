@@ -37,9 +37,18 @@ alias cashmere='mplayer -nocache -afm ffmpeg http://cashmereradio.out.airtime.pr
 alias kmhd='mplayer -nocache -afm ffmpeg http://stream5.opb.org/kmhd_web.mp3'
 
 alias resteyes='termdown 20 && say done'
-alias workcycle='termdown 20m && say rest eyes && termdown 20 && say done '
+#alias workcycle='termdown 20m && say rest eyes && termdown 20 && say done '
 alias sshB='ssh root@159.65.179.9'
 
+
+function workcycle(){
+	n=0
+	while [ $n -le $1 ]
+	do 
+	     termdown 20m && say rest eyes && termdown 20 && say finished
+	     n=$(( n+1 ))
+	done
+}
 
 
 ITP(){
@@ -53,19 +62,12 @@ BIGIP(){
 	echo whois -h whois.radb.net -- \'-i origin $ASNUM\' \| grep route 
 }
 
-function countdown(){
-   date1=$((`date +%s` + $1)); 
-   while [ "$date1" -ge `date +%s` ]; do 
-     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
-     sleep 0.1
-   done
-}
 
 function min7(){
-   n=1
-   while [ $n -le 12 ]
+   EXERCISES=( "Jumping Jacks" "Wall Sit" "Push Ups" "Sit Ups" "Step Ups" "Squats" "Tricep Dips" "Plank" "Running In Place" "Lunges" "Push Ups With Rotation" )
+   for i in "${EXERCISES[@]}"   
    do
-	   say start && termdown 30 --exec-cmd "if [ '{0}' == '3' ]; then say -v Alex {1}; fi" && say stop && termdown 10 --exec-cmd "if [ '{0}' == '3' ]; then say -v Alex {1}; fi" 
-	   n=$(( n+1 ))
+	   say $i && termdown 30 --exec-cmd "if [ '{0}' == '3' ]; then say -v Alex {1}; fi" && say stop && termdown 10 --exec-cmd "if [ '{0}' == '3' ]; then say -v Alex {1}; fi" 
    done
+   say side plank && termdown 30 --exec-cmd "if [ '{0}' == '15' ]; then say -v Alex switch sides; fi" && say workout complete
 }
