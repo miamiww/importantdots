@@ -21,11 +21,16 @@ alias bashRestart="exec bash -l"
 
 alias appletviewer="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin/appletviewer"
 alias thesis="cd /Users/aljones/ITP/Year2/2Semester/Thesis"
+
 alias weather='curl wttr.in/nyc | less'
 alias wgetAll='wget --recursive --no-clobber --html-extension --page-requisites --convert-links --no-parent'
+
 alias thelot='mplayer -nocache -afm ffmpeg http://thelot.out.airtime.pro:8000/thelot_b'
 alias nts2='mplayer -nocache -afm ffmpeg http://stream-relay-geo.ntslive.net/stream2'
 alias nts1='mplayer -nocache -afm ffmpeg http://stream-relay-geo.ntslive.net/stream'
+
+alias venvpy3='virtualenv --python=$HOME/.localpython/bin/python3.7'
+
 
 ITP(){
 	cd /Users/aljones/ITP/"$1"/"$2"
