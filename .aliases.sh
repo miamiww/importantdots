@@ -20,13 +20,16 @@ alias python27="conda activate py27"
 alias bashRestart="exec bash -l"
 alias freeciv="freeciv-gtk2"
 alias tclock="tty-clock -DBc -C 5"
+#alias zzz="pmset sleepnow"
+alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+alias ps2='wine /Users/aljones/.wine/drive_c/Program\ Files\ \(x86\)/PCSX2\ 1.4.0/pcsx2.exe'
 
 alias appletviewer="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin/appletviewer"
 
 alias thesis="cd /Users/aljones/ITP/Year2/2Semester/Thesis"
 alias cdgo="cd ~/.golang"
 
-alias weather='curl wttr.in/nyc | less'
+alias weather='curl wttr.in/nyc?u | less'
 alias wgetAll='wget --recursive --no-clobber --html-extension --page-requisites --convert-links --no-parent'
 
 alias thelot='mplayer -nocache -afm ffmpeg http://thelot.out.airtime.pro:8000/thelot_b'
@@ -41,7 +44,21 @@ alias resteyes='termdown 20 && say done'
 alias sshB='ssh root@159.65.179.9'
 
 
-function workcycle(){
+blockCheck(){
+	result=$(curl https://thegreatest.website:8080/ips/"$1")
+	echo $result
+}
+
+hostIP(){
+	host $1 | grep -E -o "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
+}
+
+zzz(){
+	osascript -e 'set volume output muted true'
+	blueutil -p 0
+	pmset sleepnow
+}
+workcycle(){
 	n=0
 	while [ $n -le $1 ]
 	do 
@@ -58,16 +75,22 @@ ITP(){
 BIGIP(){
 	ASNUM=$1
 	shift;
-	echo 'Querying WHOIS for $ASNUM'
-	echo whois -h whois.radb.net -- \'-i origin $ASNUM\' \| grep route 
+	echo 'Querying WHOIS for' $ASNUM
+	result=$(whois -h whois.radb.net -- "-i origin $ASNUM" \| grep -Eo "([0-9.]+){4}/[0-9]+" | grep route)
+	echo $result
 }
 
 
-function min7(){
-   EXERCISES=( "Jumping Jacks" "Wall Sit" "Push Ups" "Sit Ups" "Step Ups" "Squats" "Tricep Dips" "Plank" "Running In Place" "Lunges" "Push Ups With Rotation" )
+min7(){
+   EXERCISES=( "Wall Sit" "Push Ups" "Sit Ups" "Step Ups" "Squats" "Tricep Dips" "Plank" "Running In Place" "Lunges" "Push Ups With Rotation" "Side Plank")
+   say lets go. jumping jacks 
    for i in "${EXERCISES[@]}"   
    do
-	   say $i && termdown 30 --exec-cmd "if [ '{0}' == '3' ]; then say -v Alex {1}; fi" && say stop && termdown 10 --exec-cmd "if [ '{0}' == '3' ]; then say -v Alex {1}; fi" 
+	   say start && termdown 30 --exec-cmd "if [ '{0}' == '3' ]; then say -v Alex {1}; elif [ '{0}' == '2' ]; then say -v Alex {1}; elif [ '{0}' == '1' ]; then say -v Alex {1}; fi" && say stop.  Next up $i && termdown 10 --exec-cmd "if [ '{0}' == '3' ]; then say -v Alex {1}; elif [ '{0}' == '2' ]; then say -v Alex {1}; elif [ '{0}' == '1' ]; then say -v Alex {1}; fi" 
    done
-   say side plank && termdown 30 --exec-cmd "if [ '{0}' == '15' ]; then say -v Alex switch sides; fi" && say workout complete
+   say start && termdown 15 && say -v Alex switch sides && termdown 17 && say workout complete
+}
+
+stretchA(){
+	termdown 5 && say start && termdown 30 && say stop && termdown 10 && say start && termdown 45 && say stop && termdown 10 && say start && termdown 60 && say stop
 }
