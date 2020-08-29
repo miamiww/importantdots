@@ -68,6 +68,9 @@ workcycle(){
 }
 
 
+alias venvpy3='virtualenv --python=$HOME/.localpython/bin/python3.7'
+
+
 ITP(){
 	cd /Users/aljones/ITP/"$1"/"$2"
 }
