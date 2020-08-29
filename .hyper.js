@@ -9,10 +9,10 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'Monaco, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'Fira Mono for Powerline, Monaco, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -136,7 +136,15 @@ module.exports = {
     // Whether to use the WebGL renderer. Set it to false to use canvas-based
     // rendering (slower, but supports transparent backgrounds)
     webGLRenderer: true,
-
+    hyperline:{
+      plugins: [
+        "hostname",
+        "ip",
+        "cpu",
+        "memory",
+        "network"
+      ]
+    },
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
 
@@ -146,11 +154,10 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-<<<<<<< HEAD
-  plugins: ["hyperminimal", "hyperpower"],
-=======
-  plugins: ["hyperpower", "hyperminimal"],
->>>>>>> 639cb21688a789cab6030622ec1ee5b331c52bc6
+  // plugins: ["hyperminimal", "hyperpower", "verminal"],
+  // plugins: ["hyperpower", "hyperminimal"],
+
+  plugins: ["hyperminimal", "hyperline"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
