@@ -42,7 +42,7 @@ alias kmhd='mplayer -nocache -afm ffmpeg http://stream5.opb.org/kmhd_web.mp3'
 alias resteyes='termdown 20 && say done'
 #alias workcycle='termdown 20m && say rest eyes && termdown 20 && say done '
 alias sshB='ssh root@159.65.179.9'
-
+alias podfix='switchaudiosource -t input -s "MacBook Pro Microphone"'
 
 blockCheck(){
 	result=$(curl https://thegreatest.website:8080/ips/"$1")
