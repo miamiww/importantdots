@@ -7,6 +7,17 @@ export PATH="/usr/local/bin:$PATH"
 #export PATH="/usr/local/opt/inetutils/libexec/gnubin:$PATH"
 # for when I make something just for me
 export PATH="/Users/aljones/.local/bin:$PATH"
+
+# global python
+#export PATH="/Users/aljones/.localpython/bin:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+#Postgres stuff
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
 #added by Anaconda3 4.1.0 installer
 #export PATH="/Users/aljones/anaconda/bin:$PATH"
 
@@ -34,18 +45,22 @@ export PATH="/Users/aljones/.local/bin:$PATH"
 export PATH="/Applications/Xcode.app/Contents/Developer:$PATH"
 
 
-#pyenv management, see https://opensource.com/article/19/5/python-3-default-mac
-if command -v pyenv 1>/dev/null 2>&1; then 
-	eval "$(pyenv init -)" 
-fi
-
 #more icu4c stuff, telling compilers where to find it
 #export LDFLAGS="-L/usr/local/opt/icu4c/lib"
 #export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 #export LDFLAGS="-L/usr/local/Cellar/icu4c/62.1/lib/"
 
 
-#nvm
+# nvm
 export NVM_DIR="$HOME/.nvm" 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+#pyenv management, see https://opensource.com/article/19/5/python-3-default-mac
+if command -v pyenv 1>/dev/null 2>&1; then 
+	eval "$(pyenv init -)" 
+fi
+
+
+
