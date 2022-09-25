@@ -2,12 +2,14 @@ source ~/.path_setup.sh
 source ~/.aliases.sh
 source ~/.tiny_care.sh
 source ~/.btd_aliases.sh
+source ~/.lab_aliases.sh
+source ~/.bless_aliases.sh
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/aljones/.oh-my-zsh"
+export ZSH="/Users/madonna/.oh-my-zsh"
 
 # Path to antigen
 #source ~/.antigen.zsh
@@ -32,8 +34,8 @@ export ZSH="/Users/aljones/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="af-magic"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -88,6 +90,17 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-autosuggestions
+  web-search
+  copydir
+  copybuffer
+  copyfile
+  dirhistory
+  history
+  emoji
+  gitignore
+  lol
+  macos
 )
 
 source $ZSH/oh-my-zsh.sh

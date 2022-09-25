@@ -158,6 +158,8 @@ module.exports = {
   // plugins: ["hyperpower", "hyperminimal"],
 
   plugins: ["hyperminimal", "hyperline"],
+//  plugins: ["hyperline"],
+
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

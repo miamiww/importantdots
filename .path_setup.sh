@@ -1,5 +1,8 @@
 echo "setting paths"
 
+# php for bless
+export PATH="/usr/local/Cellar/php@7.4/7.4.22/bin:$PATH"
+
 # homebrew
 export PATH="/usr/local/bin:$PATH"
 
@@ -14,9 +17,14 @@ export PATH="/Users/aljones/.local/bin:$PATH"
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
+# go executables
+
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 #Postgres stuff
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+#export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 #added by Anaconda3 4.1.0 installer
 #export PATH="/Users/aljones/anaconda/bin:$PATH"
@@ -64,3 +72,4 @@ fi
 
 
 
+#export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"

@@ -23,8 +23,11 @@ alias tclock="tty-clock -DBc -C 5"
 #alias zzz="pmset sleepnow"
 alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 alias ps2='wine /Users/aljones/.wine/drive_c/Program\ Files\ \(x86\)/PCSX2\ 1.4.0/pcsx2.exe'
-
+alias sandbox='cd ~/sandbox'
 alias appletviewer="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin/appletviewer"
+
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 alias thesis="cd /Users/aljones/ITP/Year2/2Semester/Thesis"
 alias cdgo="cd ~/.golang"
@@ -32,17 +35,36 @@ alias cdgo="cd ~/.golang"
 alias weather='curl wttr.in/nyc?u | less'
 alias wgetAll='wget --recursive --no-clobber --html-extension --page-requisites --convert-links --no-parent'
 
-alias thelot='mplayer -nocache -afm ffmpeg http://thelot.out.airtime.pro:8000/thelot_b'
-alias nts2='mplayer -nocache -afm ffmpeg http://stream-relay-geo.ntslive.net/stream2'
-alias nts1='mplayer -nocache -afm ffmpeg http://stream-relay-geo.ntslive.net/stream'
+# alias thelot='mplayer -nocache -afm ffmpeg http://thelot.out.airtime.pro:8000/thelot_b'
+# alias nts2='mplayer -nocache -afm ffmpeg http://stream-relay-geo.ntslive.net/stream2'
+# alias nts1='mplayer -nocache -afm ffmpeg http://stream-relay-geo.ntslive.net/stream'
+alias nts1='mpv http://stream-relay-geo.ntslive.net/stream'
+alias nts2='mpv http://stream-relay-geo.ntslive.net/stream2'
+alias thelot='mpv http://thelot.out.airtime.pro:8000/thelot_b'
 alias rinse='mplayer -nocache -afm ffmpeg http://206.189.117.157:8000/stream'
 alias cashmere='mplayer -nocache -afm ffmpeg http://cashmereradio.out.airtime.pro:8000/cashmereradio_b'
-alias kmhd='mplayer -nocache -afm ffmpeg http://stream5.opb.org/kmhd_web.mp3'
+alias kmhd='mpv http://stream5.opb.org/kmhd_web.mp3'
 
+alias googler='googler -n 3'
 alias resteyes='termdown 20 && say done'
 #alias workcycle='termdown 20m && say rest eyes && termdown 20 && say done '
 alias sshB='ssh root@159.65.179.9'
 alias podfix='switchaudiosource -t input -s "MacBook Pro Microphone"'
+alias playbin='pbpaste | mpv'
+
+changevolume(){
+	sudo osascript -e "set Volume $1"
+}
+
+grepstring(){
+	grep -rnwl "$1" -e "$2"
+}
+
+tinycare(){
+	nvm use 11
+	tiny-care-terminal
+}
+
 
 blockCheck(){
 	result=$(curl https://thegreatest.website:8080/ips/"$1")
@@ -96,4 +118,18 @@ min7(){
 
 stretchA(){
 	termdown 5 && say start && termdown 30 && say stop && termdown 10 && say start && termdown 45 && say stop && termdown 10 && say start && termdown 60 && say stop
+}
+
+cmusstart(){
+	cd /Users/aljones/Desktop/4drive
+	cmus	
+}
+
+findAndReplaceAll(){
+	grep -rli $1 * | xargs -i@ sed -i "s/$1/$2/g" @
+
+}
+
+replaceHomeFolderName(){
+	sudo grep -rl "Users/$1" ./ | tr '\n' '\0'  |  xargs -0 sudo gsed -i "s/$1/$2/g" &
 }

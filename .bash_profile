@@ -21,3 +21,4 @@ getIP(){
 bash /Users/aljones/.functions/.getIP/getIP
 }
 
+. "$HOME/.cargo/env"
