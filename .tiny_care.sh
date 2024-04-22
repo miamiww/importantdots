@@ -7,7 +7,7 @@ export TTC_BOTS='tinycarebot,selfcare_bot,magicrealismbot'
 export TTC_SAY_BOX='cat'
 
 # List of folders to look into for `git` commits, comma separated.
-export TTC_REPOS='/Users/aljones/sandbox,/Users/aljones/ITP/Year1,/Users/aljones/ITP/Year2,/Users/aljones/ITP/Summer2018,/Users/aljones/personal_website,/Users/aljones/Rprojects,/Users/aljones/Projects/,/Users/aljones/ITP/ITPBlog,/Users/aljones/Desktop/Blocker'
+export TTC_REPOS='/Users/madonna/sandbox,/Users/madonna/Dropbox/Classes,/Users/madonna/personal_website,/Users/madonna/Dropbox/Projects/'
 
 # The max directory-depth to look for git repositories in
 # the directories defined with `TTC_REPOS`. Note that the deeper
