@@ -3,7 +3,12 @@ echo 'setting aliases'
 #alias tmux="TERM=screen-256color-bce tmux"
 # music organization related
 alias intake='cd /Users/madonna/Desktop/MP3s/AllTracks/Intake'
+alias sshk='kitty +kitten ssh'
 
+alias qcookies='qutecookies -p /Users/madonna/Library/Application\ Support/qutebrowser/webengine/Cookies'
+alias clearqutecookies="qcookies --json | jq '[ .[] | select(.host_key | contains(\"proton\")) ]' | qcookies --delete-all-cookies"
+
+alias ibrew='/usr/local/bin/brew'	
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
@@ -16,7 +21,7 @@ alias gs='git status'
 alias deployH='bash ~/ITP/ITPblog/deploy.sh'
 alias slidebot800='/Users/madonna/ITP/Year1/Semester2/ElectronicText/final_project/slidebot'
 alias ls='ls -GFh'
-alias screen="/usr/local/bin/screen"
+# alias screen="/usr/local/bin/screen"
 alias firefox="/Applications/Firefox\ 2.app/Contents/MacOS/firefox"
 alias pingu="ping -c 3"
 alias noCors="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security"
@@ -58,6 +63,10 @@ alias podfix='switchaudiosource -t input -s "MacBook Pro Microphone"'
 alias playbin='pbpaste | mpv'
 # music organization related
 alias intake='cd /Users/madonna/Desktop/MP3s/AllTracks/Intake'
+
+alias ladybird="/Users/madonna/sandbox/ladybird/Build/release/bin/Ladybird.app/Contents/MacOS/Ladybird"
+
+alias dandelions="mpv https://youtu.be/RUsUQ9tRHHQ"
 
 exifclean(){
 	
@@ -110,7 +119,7 @@ hostIP(){
 
 zzz(){
 	osascript -e 'set volume output muted true'
-	blueutil -p 0
+#	blueutil -p 0
 	pmset sleepnow
 }
 workcycle(){

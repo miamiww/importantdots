@@ -1,7 +1,7 @@
 echo "setting paths"
 
 # php for bless
-export PATH="/usr/local/Cellar/php@7.4/7.4.22/bin:$PATH"
+# export PATH="/usr/local/Cellar/php@7.4/7.4.22/bin:$PATH"
 
 # homebrew
 export PATH="/usr/local/bin:$PATH"
@@ -18,6 +18,9 @@ export PATH="/Users/madonna/.local/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
+
+# haskell
+[ -f "/Users/madonna/.ghcup/env" ] && . "/Users/madonna/.ghcup/env" # ghcup-env  
 
 # go executables
 
@@ -49,6 +52,24 @@ export PATH="$GOPATH/bin:$PATH"
 #unset __conda_setup
 # <<< conda init <<<
 
+# <<< minoconda path
+#export PATH="/Users/madonna/miniconda3/bin:$PATH"
+#export CONDA_PYTHON_EXE='/Users/madonna/miniconda3/bin/python'
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/Users/madonna/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/Users/madonna/miniconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/madonna/miniconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/Users/madonna/miniconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+# <<< conda initialize <<<
+
 #trying to tell homebrew where xcode is
 export PATH="/Applications/Xcode.app/Contents/Developer:$PATH"
 
@@ -71,5 +92,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 
-
 #export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"

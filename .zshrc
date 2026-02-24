@@ -1,6 +1,8 @@
 source ~/.path_setup.sh
 source ~/.aliases.sh
 source ~/.tiny_care.sh
+source ~/.cloud_aliases.sh
+source ~/.paglen_aliases.sh
 # source ~/.btd_aliases.sh
 # source ~/.lab_aliases.sh
 # source ~/.bless_aliases.sh
@@ -134,3 +136,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f "/Users/madonna/.ghcup/env" ] && . "/Users/madonna/.ghcup/env" # ghcup-env
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
